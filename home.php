@@ -132,29 +132,27 @@
 </header>
 <!-- header -->
 
-<!--Ful Screen Section Video with caption-->
-<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome">
+<!--Main Slider-->
+<section class="full-screen gradient_bg_alt particles_bg d-flex flex-column justify-content-center">
+	<div id="particles-js"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-1"></div>
 			<div class="col-md-8 col-sm-10">
-				<div class="center-item text-center video-content">
-					<h2 class="text-capitalize top50 bottom35  whitecolor">
-						<span class="block fontbold wow fadeIn" data-wow-delay="500ms"> <img src="<?=get_stylesheet_directory_uri()?>/images/logo.png"> </span>
-                     	<span class="font-xlight block wow fadeIn" data-wow-delay="400ms">来自澳洲的蹦床娱乐体验</span>
+				<div class="text-center banner-center-content padding_half">
+					<img src="<?=get_stylesheet_directory_uri()?>/images/logo.svg" style="width:50%;">
+					<h2 class="text-capitalize whitecolor font-light top50 bottom35">
+						来自<span class="fontbold">澳洲</span>的蹦床娱乐体验
 					</h2>
-					<!--<a href="#btn-feature" class="button btnwhite pagescroll wow fadeInUp" data-wow-delay="600ms">features</a>-->
+					<!--<a href="#contactus" class="button btnwhite pagescroll">Let's Talk</a>
+					<a href="#our-apps" class="button btnsecondary pagescroll">Read More</a>-->
 				</div>
 			</div>
 			<div class="col-md-2 col-sm-1"></div>
 		</div>
 	</div>
-	<video class="my-background-video jquery-background-video" loop autoplay muted
-		   poster="">
-		<source src="https://st2.depositphotos.com/4358523/6560/v/600/depositphotos_65604247-stock-video-kids-jumping-on-trampoline.mp4" type="video/mp4">
-	</video>
 </section>
-
+<!--Main Slider ends -->
 
 <!--half img section-->
 <section class="half-section" id="aboutus">

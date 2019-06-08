@@ -266,14 +266,14 @@ section{
     background: -webkit-gradient(linear, left top, right top, color-stop(68%, #00e4ce), color-stop(100%, #00abc9));
     background: -webkit-linear-gradient(left, #00e4ce 68%, #00abc9 100%);
     background: -o-linear-gradient(left, #00e4ce 68%, #00abc9 100%);
-    background: linear-gradient(90deg, #00e4ce 68%, #00abc9 100%);
+    background: linear-gradient(45deg, #00e4ce 68%, #00abc9 100%);
 }
 .gradient_bg_alt{
-    background: -webkit-linear-gradient(90deg, #90A4AE 68%, #607D8B 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(68%, #90A4AE), color-stop(100%, #607D8B));
-    background: -webkit-linear-gradient(left, #90A4AE 68%, #607D8B 100%);
-    background: -o-linear-gradient(left, #90A4AE 68%, #607D8B 100%);
-    background: linear-gradient(90deg, #90A4AE 68%, #607D8B 100%);
+    background: -webkit-linear-gradient(90deg, #dc8d4d 20%, #d3674f 80%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dc8d4d), color-stop(80%, #d3674f));
+    background: -webkit-linear-gradient(left, #dc8d4d 20%, #d3674f 80%);
+    background: -o-linear-gradient(left, #dc8d4d 20%, #d3674f 80%);
+    background: linear-gradient(45deg, #dc8d4d 20%, #d3674f 80%);
 }
 
 /*heading Titles */
