@@ -966,7 +966,7 @@ $("#submit_btn").click(function() {
    
    /* Initializing Particles */
    if ($("#particles-js").length) {
-      window.onload = function () {
+      var initParticle = function () {
           particlesJS('particles-js', {
              "particles": {
                  "number": {
@@ -1026,7 +1026,7 @@ $("#submit_btn").click(function() {
                      "speed": 6,
                      "direction": "bottom",
                      "random": true,
-                     "straight": false,
+                     "straight": true,
                      "out_mode": "bounce",
                      "bounce": false,
                      "attract": {
@@ -1078,6 +1078,9 @@ $("#submit_btn").click(function() {
              "retina_detect": true
          });
       };
+      $(function () {
+          initParticle();
+      });
    }
    
    /*Wow Animations*/
