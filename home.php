@@ -154,6 +154,24 @@
 </section>
 <!--Main Slider ends -->
 
+<!-- Background Parallax -->
+<section id="video-parallax" class="video-parallax padding parallaxie">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-7">
+				<div class="heading-title whitecolor text-md-left text-center wow fadeIn" data-wow-delay="500ms">
+					<span>详细介绍场馆和玩法</span>
+					<h2 class="fontregular">观看场馆介绍视频</h2>
+					<a data-fancybox
+					   href="https://www.youtube.com/watch?v=GhvD7NtUT-Q&autoplay=1&rel=0&controls=1&showinfo=0"
+					   class="button btnprimary fontmedium top20"><i class="fa fa-play"></i> &nbsp;播放</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Background Parallax-->
+
 <!--half img section-->
 <section class="half-section" id="aboutus">
 	<div class="container-fluid">
@@ -292,24 +310,6 @@
 	</div>
 </section>-->
 <!--Some Feature ends-->
-
-<!-- Background Parallax -->
-<section id="video-parallax" class="video-parallax padding parallaxie">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-sm-7">
-				<div class="heading-title whitecolor text-md-left text-center wow fadeIn" data-wow-delay="500ms">
-					<span>详细介绍场馆和玩法</span>
-					<h2 class="fontregular">观看场馆介绍视频</h2>
-					<a data-fancybox
-					   href="https://www.youtube.com/watch?v=GhvD7NtUT-Q&autoplay=1&rel=0&controls=1&showinfo=0"
-					   class="button btnprimary fontmedium top20"><i class="fa fa-play"></i> &nbsp;播放</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!--Background Parallax-->
 
 <!--Gallery-->
 <section id="portfolio-xe" class="bglight padding">
