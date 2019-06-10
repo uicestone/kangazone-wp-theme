@@ -68,6 +68,40 @@ $("#submit_btn").click(function() {
     }
 
 });
+
+(function () {
+   var calendar = new CalendarYvv("#calendar", moment().format("Y-M-D"), '星期一');
+
+   // preselected dates
+   calendar.diasResal = [11, 12, 13]
+
+   // background color of preselected dates
+   calendar.colorResal = "#c5baba4d"
+
+   // text color of preselected dates
+   calendar.textResalt = "#ceb9b9"
+
+   // background class
+   calendar.bg = "gradient_bg";
+
+   // text color class
+   calendar.textColor = "text-white";
+
+   // class for normal buttons
+   calendar.btnH = "btn-outline-light";
+
+   // button class when hovering over
+   calendar.btnD = "btn-rounded-success";
+
+   calendar.funcPer = function(ev){
+     console.log(ev)
+   };
+
+   calendar.createCalendar();
+
+})();
+
+
    $(document).on('contextmenu', function() {
      return false;
    });

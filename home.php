@@ -749,39 +749,11 @@
 			<div class="col-md-6 col-sm-12 margin_bottom">
 				<form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
 					<div class="row">
+						<div class="col-sm-10 offset-sm-1">
+							<div id="calendar" class="mb-3"></div>
+						</div>
 
-						<div class="col-sm-12" id="result"></div>
-
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group bottom35">
-								<input class="form-control" type="text" placeholder="First Name:" required
-									   id="first_name" name="first_name">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group bottom35">
-								<input class="form-control" type="text" placeholder="Last Name:" required id="last_name"
-									   name="last_name">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group bottom35">
-								<input class="form-control" type="email" placeholder="Email:" required id="email"
-									   name="email">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group bottom35">
-								<input class="form-control" type="tel" placeholder="Phone:" id="phone" name="phone">
-							</div>
-						</div>
-						<div class="col-md-12 col-sm-12">
-							<div class="form-group bottom35">
-								<textarea class="form-control" placeholder="Message" id="message"
-										  name="message"></textarea>
-							</div>
-						</div>
-						<div class="col-sm-12">
+						<div class="col-sm-10 offset-sm-1">
 							<button type="submit" class="button btnprimary" id="submit_btn">进入微信小程序预约</button>
 						</div>
 					</div>
@@ -851,6 +823,13 @@
 
 <!--WOw animations-->
 <script src="<?= get_stylesheet_directory_uri() ?>/js/wow.min.js"></script>
+
+<!--moment.js-->
+<script src="https://cdn.staticfile.org/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdn.staticfile.org/moment.js/2.24.0/locale/zh-cn.js"></script>
+
+<!--jsCalendar.js-->
+<script src="<?= get_stylesheet_directory_uri() ?>/js/calendar.js"></script>
 
 <!--Revolution SLider-->
 <script src="<?= get_stylesheet_directory_uri() ?>/js/revolution/jquery.themepunch.tools.min.js"></script>

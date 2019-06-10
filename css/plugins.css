@@ -19,6 +19,9 @@
 /*Youtube Background Video*/
 @import "jquery.background-video.css";
 
+/*jsCalendar*/
+@import "calendar.css";
+
 /*Revolution Slider*/
 @import "settings.css";
 @import "layers.css";
