@@ -155,16 +155,20 @@
 <!--Main Slider ends -->
 
 <!-- Background Parallax -->
-<section id="video-parallax" class="video-parallax padding parallaxie">
+<?php $page_video = get_page_by_path('video'); ?>
+<section id="video-parallax" class="video-parallax padding parallaxie" style="background: url('<?=get_the_post_thumbnail_url($page_video->ID, 'full')?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7 col-sm-7">
 				<div class="heading-title whitecolor text-md-left text-center wow fadeIn" data-wow-delay="500ms">
-					<span>详细介绍场馆和玩法</span>
-					<h2 class="fontregular">观看场馆介绍视频</h2>
+					<span><?=get_the_subtitle($page_video->ID)?></span>
+					<h2 class="fontregular"><?=get_the_title($page_video->ID)?></h2>
 					<a data-fancybox
-					   href="https://www.youtube.com/watch?v=GhvD7NtUT-Q&autoplay=1&rel=0&controls=1&showinfo=0"
+					   href="#intro-video"
 					   class="button btnprimary fontmedium top20"><i class="fa fa-play"></i> &nbsp;播放</a>
+					<video width="640" height="320" controls id="intro-video" autoplay style="display:none;padding:0;background:black;">
+						<source src="<?=get_field('video', $page_video->ID)?>" type="video/mp4">
+					</video>
 				</div>
 			</div>
 		</div>
@@ -172,72 +176,40 @@
 </section>
 <!--Background Parallax-->
 
+<?php foreach (get_posts('category_name=service&order=asc') as $index => $service_post): ?>
 <!--half img section-->
 <section class="half-section" id="aboutus">
 	<div class="container-fluid">
 		<div class="row">
+			<?php if ($index % 2 === 0): ?>
 			<div class="col-lg-6 nopadding">
 				<div class="image img-container">
-					<img alt="" src="<?= get_stylesheet_directory_uri() ?>/images/split-img1.jpg" class="equalheight">
+					<?=get_the_post_thumbnail($service_post, 'post-thumbnail', array('class' => 'equalheight'))?>
 				</div>
 			</div>
+			<?php endif; ?>
 			<div class="col-lg-6 nopadding">
 				<div class="split-box text-center center-block container-padding equalheight" id="btn-feature">
 					<div class="heading-title padding">
-						<span class=" wow fadeIn" data-wow-delay="300ms">您可以体验</span>
-						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms">计时自由探险</h2>
-						<p class="heading_space wow fadeIn" data-wow-delay="400ms">在指定的时间内，按照自己的计划探索我们每一项安全又刺激的设施，或者，谁说一定要有计划呢？</p>
+						<span class=" wow fadeIn" data-wow-delay="300ms"><?=get_the_subtitle($service_post)?></span>
+						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms"><?=get_the_title($service_post)?></h2>
+						<p class="heading_space wow fadeIn" data-wow-delay="400ms"><?=get_the_excerpt($service_post)?></p>
 						<a href="#portfolio-xe" class="button btnprimary pagescroll wow fadeInUp"
 						   data-wow-delay="500ms">立即预约</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<section class="half-section">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-6 nopadding">
-				<div class="split-box text-center center-block container-padding equalheight">
-					<div class="heading-title padding">
-						<span class="wow fadeIn" data-wow-delay="300ms">您可以参与</span>
-						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms">派对和聚会</h2>
-						<p class="heading_space wow fadeIn" data-wow-delay="400ms">畅享所有娱乐设施的同时，还拥有专属聚会房间，享受专属服务</p>
-						<a href="#our-team" class="button btnsecondary pagescroll wow fadeInUp" data-wow-delay="500ms">立即预约</a>
+			<?php if ($index % 2 === 1): ?>
+				<div class="col-lg-6 nopadding">
+					<div class="image img-container">
+						<?=get_the_post_thumbnail($service_post, 'post-thumbnail', array('class' => 'equalheight'))?>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-6 nopadding">
-				<div class="image img-container">
-					<img alt="" src="<?= get_stylesheet_directory_uri() ?>/images/split-img2.jpg" class="equalheight">
-				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
-<section class="half-section" id="aboutus">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-6 nopadding">
-				<div class="image img-container">
-					<img alt="" src="<?= get_stylesheet_directory_uri() ?>/images/split-img1.jpg" class="equalheight">
-				</div>
-			</div>
-			<div class="col-lg-6 nopadding">
-				<div class="split-box text-center center-block container-padding equalheight" id="btn-feature">
-					<div class="heading-title padding">
-						<span class=" wow fadeIn" data-wow-delay="300ms">您可以举办</span>
-						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms">企业团队建设活动</h2>
-						<p class="heading_space wow fadeIn" data-wow-delay="400ms">放下工作，与你的同事充分享受整片空间</p>
-						<a href="#portfolio-xe" class="button btnprimary pagescroll wow fadeInUp"
-						   data-wow-delay="500ms">可用日期</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<?php endforeach; ?>
 <!--half img section ends-->
 
 <!-- Our Team-->
@@ -324,16 +296,16 @@
 			</div>
 		</div>
 		<div id="flat-gallery" class="cbp">
-			<?php for($i = 0; $i<6; $i++): ?>
+			<?php foreach(get_posts('post_type=attachment&posts_per_page=6&category_name=album') as $image_post): ?>
 			<div class="cbp-item itemshadow">
-				<img src="<?= get_stylesheet_directory_uri() ?>/images/portfolio-5.jpg" alt="">
+				<img src="<?=wp_get_attachment_url($image_post->ID)?>" alt="">
 				<div class="overlay center-block whitecolor">
 					<a class="plus" data-fancybox="gallery" href="images/portfolio-5.jpg"></a>
-					<h4 class="top30">照片</h4>
-					<p>照片描述</p>
+					<h4 class="top30"><?=get_the_title($image_post->ID)?></h4>
+					<p><?=get_the_excerpt($image_post->ID)?></p>
 				</div>
 			</div>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
