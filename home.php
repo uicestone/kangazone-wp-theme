@@ -558,48 +558,21 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div id="testimonial-slider" class="owl-carousel">
+					<?php foreach (get_posts('category_name=testimonial') as $comment_post): ?>
 					<div class="item">
 						<div class="testimonial-wrapp">
 							<span class="quoted"><i class="fa fa-quote-right"></i></span>
 							<div class="testimonial-text">
-								<p class="bottom40">Donec semper euismod nisi quis feugiat. Nullam finibus metus eget
-									orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.</p>
+								<p class="bottom40"><?=get_the_excerpt($comment_post->ID)?></p>
 							</div>
-							<div class="testimonial-photo"><img alt=""
-																src="<?= get_stylesheet_directory_uri() ?>/images/testimonial-1.jpg">
+							<div class="testimonial-photo">
+								<?=get_the_post_thumbnail($comment_post->ID)?>
 							</div>
-							<h4 class="darkcolor">David Raleway</h4>
-							<small class="defaultcolor">中学生</small>
+							<h4 class="darkcolor"><?=get_the_title($comment_post->ID)?></h4>
+							<small class="defaultcolor"><?=get_the_subtitle($comment_post->ID)?></small>
 						</div>
 					</div>
-					<div class="item">
-						<div class="testimonial-wrapp">
-							<span class="quoted"><i class="fa fa-quote-right"></i></span>
-							<div class="testimonial-text">
-								<p class="bottom40">Donec semper euismod nisi quis feugiat. Nullam finibus metus eget
-									orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.</p>
-							</div>
-							<div class="testimonial-photo"><img alt=""
-																src="<?= get_stylesheet_directory_uri() ?>/images/testimonial-2.jpg">
-							</div>
-							<h4 class="darkcolor">Sam Billings</h4>
-							<small class="defaultcolor">小学生</small>
-						</div>
-					</div>
-					<div class="item">
-						<div class="testimonial-wrapp">
-							<span class="quoted"><i class="fa fa-quote-right"></i></span>
-							<div class="testimonial-text">
-								<p class="bottom40">Donec semper euismod nisi quis feugiat. Nullam finibus metus eget
-									orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.</p>
-							</div>
-							<div class="testimonial-photo"><img alt=""
-																src="<?= get_stylesheet_directory_uri() ?>/images/testimonial-3.jpg">
-							</div>
-							<h4 class="darkcolor">Jatinder Shahg</h4>
-							<small class="defaultcolor">上班族</small>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
