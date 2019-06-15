@@ -558,7 +558,7 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div id="testimonial-slider" class="owl-carousel">
-					<?php foreach (get_posts('category_name=testimonial') as $comment_post): ?>
+					<?php foreach (get_posts('category_name=testimonial&posts_per_page=-1') as $comment_post): ?>
 					<div class="item">
 						<div class="testimonial-wrapp">
 							<span class="quoted"><i class="fa fa-quote-right"></i></span>
@@ -639,17 +639,18 @@
 <!-- Our Blogs -->
 <section id="our-blog" class="half-section bglight">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row"><?php $news_post = get_posts('category_name=news&posts_per_page=1')[0]; ?>
 			<div class="col-md-6 col-sm-6 nopadding">
-				<div class="image hover-effect"><img src="<?= get_stylesheet_directory_uri() ?>/images/split-blog.jpg"
-													 alt="our blog" class="equalheight"></div>
+				<div class="image hover-effect">
+					<?=get_the_post_thumbnail($news_post->ID, 'post-thumbnail', array('class' => 'equalheight'))?>
+				</div>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<div class="split-box text-center center-block equalheight container-padding">
 					<div class="heading-title padding_half">
-						<span class="wow fadeIn" data-wow-delay="300ms">关注我们发布</span>
-						<h2 class="darkcolor bottom25 wow fadeIn" data-wow-delay="350ms">最新信息</h2>
-						<p class="heading_space wow fadeIn" data-wow-delay="400ms">开业优惠开业优惠，开业优惠开业优惠开业优惠开业优惠，开业优惠开业优惠。</p>
+						<span class="wow fadeIn" data-wow-delay="300ms">关注我们发布的最新信息</span>
+						<h2 class="darkcolor bottom25 wow fadeIn" data-wow-delay="350ms"><?=get_the_title($news_post->ID)?></h2>
+						<p class="heading_space wow fadeIn" data-wow-delay="400ms"><?=get_the_excerpt($news_post->ID)?></p>
 						<a href="<?=get_the_permalink($post->ID)?>" class="button btnsecondary wow fadeInUp" data-wow-delay="500ms">查看详情</a>
 					</div>
 				</div>
