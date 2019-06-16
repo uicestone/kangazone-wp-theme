@@ -1057,7 +1057,7 @@ $("#submit_btn").click(function() {
                  },
                  "move": {
                      "enable": true,
-                     "speed": 6,
+                     "speed": 8,
                      "direction": "bottom",
                      "random": true,
                      "straight": true,

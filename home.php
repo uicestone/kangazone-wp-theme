@@ -156,7 +156,7 @@
 
 <!-- Background Parallax -->
 <?php $page_video = get_page_by_path('video'); ?>
-<section id="video-parallax" class="video-parallax padding parallaxie" style="background: url('<?=get_the_post_thumbnail_url($page_video->ID, 'full')?>')">
+<section id="video-parallax" class="video-parallax padding parallaxie" style="background-image: url('<?=get_the_post_thumbnail_url($page_video->ID, 'full')?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7 col-sm-7">
@@ -231,7 +231,7 @@
 			<div class="col-md-4 col-xs-12">
 				<div class="team-box top60 wow fadeIn" data-wow-delay="350ms">
 					<div class="image">
-						<?=get_the_post_thumbnail($facility->ID)?>
+						<?=get_the_post_thumbnail($facility->ID, 'medium')?>
 					</div>
 					<div class="team-content gradient_bg whitecolor">
 						<h3><?=get_the_title($facility->ID)?></h3>
@@ -487,7 +487,8 @@
 <!--Counters ends-->
 
 <!-- Pricing Tables -->
-<section id="our-pricings" class="padding pricing-bg">
+<?php $page_price = get_page_by_path('price'); ?>
+<section id="our-pricings" class="padding pricing-bg" style="background-image: url('<?=get_the_post_thumbnail_url($page_price->ID, 'full')?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2 col-sm-12 text-center">

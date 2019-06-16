@@ -3080,6 +3080,9 @@ iframe  {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border: 1px solid #f1f1f1;
+    height: 240px;
+    color: #4c4c4c;
+    font-weight: 300;
 }
 .testimonial-wrapp .testimonial-photo {
 	height: 100px;
@@ -3092,10 +3095,10 @@ iframe  {
     border-radius: 50%;   
 }
 #testimonial-slider .owl-item:nth-child(2n) .testimonial-wrapp .quoted,
-#testimonial-slider .owl-item:nth-child(2n) .testimonial-wrapp:hover .testimonial-text{
+#testimonial-slider .owl-item:nth-child(2n) .testimonial-wrapp .testimonial-text{
    background: #d3674e;
 }
-.testimonial-wrapp:hover .testimonial-text{
+.testimonial-wrapp .testimonial-text{
    background: #47a3a6;
    color: #fff;
 }
