@@ -166,7 +166,7 @@
 					<a data-fancybox
 					   href="#intro-video"
 					   class="button btnprimary fontmedium top20"><i class="fa fa-play"></i> &nbsp;播放</a>
-					<video width="640" height="320" controls id="intro-video" autoplay style="display:none;padding:0;background:black;">
+					<video width="640" height="320" controls id="intro-video" autoplay style="display:none;padding:0;background:black;height:320px;width:100%">
 						<source src="<?=get_field('video', $page_video->ID)?>" type="video/mp4">
 					</video>
 				</div>
