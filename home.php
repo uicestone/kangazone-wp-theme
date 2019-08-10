@@ -661,10 +661,25 @@
 						</div>
 
 						<div class="col-sm-10 offset-sm-1">
-							<button type="submit" class="button btnprimary" id="submit_btn">进入微信小程序预约</button>
+							<button type="button" class="button btnprimary" data-toggle="modal" data-target="#weapp-qrcode-modal">进入微信小程序预约</button>
 						</div>
 					</div>
 				</form>
+				<div id="weapp-qrcode-modal" class="modal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">微信扫码进入小程序预约</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<img src="<?=get_stylesheet_directory_uri()?>/images/weapp-qrcode.png" style="width: 100%" />
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -99,6 +99,9 @@ p.title {
 button{
     line-height: 1;
 }
+button:focus {
+    outline: none;
+}
 
 
 /*common font family*/
