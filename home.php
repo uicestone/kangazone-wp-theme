@@ -141,8 +141,9 @@
 			<div class="col-md-8 col-sm-10">
 				<div class="text-center banner-center-content padding_half">
 					<img src="<?=get_stylesheet_directory_uri()?>/images/logo.svg" style="width:50%;">
+					<?php $hero = get_page_by_path('hero'); ?>
 					<h2 class="text-capitalize whitecolor font-light top50 bottom35">
-						来自<span class="fontbold">澳洲</span>的蹦床娱乐体验
+						<?=get_the_subtitle($hero->ID)?>
 					</h2>
 					<!--<a href="#contactus" class="button btnwhite pagescroll">Let's Talk</a>
 					<a href="#our-apps" class="button btnsecondary pagescroll">Read More</a>-->
@@ -311,77 +312,52 @@
 </section>
 <!--Gallery ends -->
 
-<!-- Mobile Apps -->
+<!-- Material -->
+<?php $material = get_page_by_path('material'); ?>
 <section id="our-apps" class="padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 text-center">
 				<div class="heading-title wow fadeInUp" data-wow-delay="300ms">
-					<span>来自澳大利亚的专业运动设施供应商</span>
-					<h2 class="darkcolor heading_space">安全与舒适的蹦床</h2>
+					<span><?=get_the_subtitle($material->ID)?></span>
+					<h2 class="darkcolor heading_space"><?=get_the_title($material->ID)?></h2>
 				</div>
 			</div>
 		</div>
 		<div class="row" id="app-feature">
 			<div class="col-lg-4 col-md-4 col-sm-12">
 				<div class="content-left clearfix">
-					<div class="feature-item left top30 bottom30 wow fadeInUp" data-wow-delay="300ms">
-						<span class="icon"><i class="fa fa-mobile-phone"></i></span>
+					<?php foreach (get_posts('category_name=material&posts_per_page=3') as $index => $material_post): ?>
+					<div class="feature-item left top30 bottom30 wow fadeInUp" data-wow-delay="<?=300+50*$index?>ms">
+						<span class="icon">
+							<?=get_the_post_thumbnail($material_post->ID, 'medium', array('style' => 'width:90px;height:90px;display:block;border-radius:50%'))?>
+						</span>
 						<div class="text">
-							<h4>回弹力度</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
+							<h4><?=get_the_title($material_post->ID)?></h4>
+							<p><?=get_the_excerpt($material_post->ID)?></p>
 						</div>
 					</div>
-					<div class="feature-item left top30 bottom30 wow fadeInUp" data-wow-delay="350ms">
-						<span class="icon"><i class="fa fa-cog"></i></span>
-						<div class="text">
-							<h4>坚韧的弹力材料</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
-						</div>
-					</div>
-					<div class="feature-item left top30 bottom30 wow fadeInUp" data-wow-delay="400ms">
-						<span class="icon"><i class="fa fa-edit"></i></span>
-						<div class="text">
-							<h4>丰富的色彩</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
 				<div class="image feature-item text-center wow fadeIn" data-wow-delay="500ms">
-					<img src="<?= get_stylesheet_directory_uri() ?>/images/responsive.png" alt="">
+					<?=get_the_post_thumbnail($material->ID, 'full', array('style'=>'height:auto'))?>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12">
 				<div class="content-right clearfix">
-					<div class="feature-item right top30 bottom30 wow fadeInUp" data-wow-delay="300ms">
-						<span class="icon"><i class="fa fa-code"></i></span>
+					<?php foreach (get_posts('category_name=material&posts_per_page=3&paged=2') as $index => $material_post): ?>
+					<div class="feature-item left top30 bottom30 wow fadeInUp" data-wow-delay="<?=300+50*$index?>ms">
+						<span class="icon">
+							<?=get_the_post_thumbnail($material_post->ID)?>
+						</span>
 						<div class="text">
-							<h4>灵活的进出场时间</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
+							<h4><?=get_the_title($material_post->ID)?></h4>
+							<p><?=get_the_excerpt($material_post->ID)?></p>
 						</div>
 					</div>
-					<div class="feature-item right top30 bottom30 wow fadeInUp" data-wow-delay="350ms">
-						<span class="icon"><i class="fa fa-folder-o"></i></span>
-						<div class="text">
-							<h4>挑高双层设计</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
-						</div>
-					</div>
-					<div class="feature-item right top30 bottom30 wow fadeInUp" data-wow-delay="400ms">
-						<span class="icon"><i class="fa fa-support"></i></span>
-						<div class="text">
-							<h4>专业的看护</h4>
-							<p>Lorem Ipsum. Proin gravida nibh vel velit auctor
-								aliquet</p>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -389,43 +365,27 @@
 </section>
 <!--Mobile Apps ends-->
 
-<!-- WOrk Process-->
+<!-- Process-->
+<?php $process = get_page_by_path('process'); ?>
 <section id="our-process" class="padding gradient_bg_default">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 text-center">
 				<div class="heading-title wow fadeInUp" data-wow-delay="300ms">
-					<h2 class="whitecolor"><span class="fontregular">进出场</span> 流程</h2>
+					<h2 class="whitecolor"><?=get_the_title($process->ID)?></h2>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<ul class="process-wrapp">
-				<li class="whitecolor wow fadeIn" data-wow-delay="350ms">
-					<span class="pro-step bottom20">01</span>
-					<p class="fontbold bottom25">预约</p>
-					<p>提前预约以便我们更好的为您准备</p>
+				<?php preg_match_all('/<h2>([\s\S]*?)<\/h2>[\s\S]*?<p>([\s\S]*?)<\/p>/', $process->post_content, $matches); ?>
+				<?php foreach ($matches[0] as $index => $process_name): ?>
+				<li class="whitecolor wow fadeIn" data-wow-delay="<?=350+50*$index?>ms">
+					<span class="pro-step bottom20"><?=str_pad($index+1, 2, '0', STR_PAD_LEFT)?></span>
+					<p class="fontbold bottom25"><?=$matches[1][$index]?></p>
+					<p><?=$matches[2][$index]?></p>
 				</li>
-				<li class="whitecolor wow fadeIn" data-wow-delay="400ms">
-					<span class="pro-step bottom20">02</span>
-					<p class="fontbold bottom25">前台登记</p>
-					<p>前往场馆登记入场，并领取手环</p>
-				</li>
-				<li class="whitecolor wow fadeIn" data-wow-delay="500ms">
-					<span class="pro-step bottom20">03</span>
-					<p class="fontbold bottom25">准备</p>
-					<p>前往准备去穿上专用袜，热身准备迎接挑战</p>
-				</li>
-				<li class="whitecolor wow fadeIn" data-wow-delay="600ms">
-					<span class="pro-step bottom20">04</span>
-					<p class="fontbold bottom25">入场</p>
-					<p>选择喜欢和空闲的设施尽情玩耍吧</p>
-				</li>
-				<li class="whitecolor wow fadeIn" data-wow-delay="700ms">
-					<span class="pro-step bottom20">05</span>
-					<p class="fontbold bottom25">离场</p>
-					<p>归还手环，在指定结束时间15分钟内离场</p>
-				</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 	</div>
@@ -681,9 +641,9 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6 our-address top40">
 						<h5 class="bottom25">地址</h5>
-						<p class="bottom15">南京市鼓楼区xx路xx号
-						<span class="block">商场X座0-0</span> </p>
-						<a class="pickus" href="#." data-text="Get Directions">在手机上导航</a>
+						<p class="bottom15">南京市江宁区秣周东路12号
+						<span class="block">砂之船商场4楼-B02</span> </p>
+						<a class="pickus" href="#." data-text="在手机上导航">在手机上导航</a>
 					</div>
 					<div class="col-md-6 col-sm-6 our-address top40">
 						<h5 class="bottom25">联系电话</h5>
