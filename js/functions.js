@@ -70,10 +70,10 @@ $("#submit_btn").click(function() {
 });
 
 (function () {
-   var calendar = new CalendarYvv("#calendar", moment().format("Y-M-D"), '星期一');
+   var calendar = new CalendarYvv("#calendar");
 
    // preselected dates
-   calendar.diasResal = [11, 12, 13]
+   calendar.diasResal = [] // [11, 12, 13]
 
    // background color of preselected dates
    calendar.colorResal = "#c5baba4d"
@@ -864,7 +864,7 @@ $("#submit_btn").click(function() {
 
    /* ----- Google Map ----- */
    if ($("#map-container").length) {
-      function initialize() {
+      var initialize = function() {
          var mapOptions = {
             zoom: 18,
             scrollwheel: false,
