@@ -54,28 +54,28 @@
 			<div class="collapse navbar-collapse" id="xenav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#ourhome">首页</a>
+						<a class="nav-link" href="<?=site_url()?>/#ourhome">首页</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#aboutus">服务项目</a>
+						<a class="nav-link" href="<?=site_url()?>/#aboutus">服务项目</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#facilities">设施介绍</a>
+						<a class="nav-link" href="<?=site_url()?>/#facilities">设施介绍</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#portfolio-xe">活动影集</a>
+						<a class="nav-link" href="<?=site_url()?>/#portfolio-xe">活动影集</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-pricings">价格与优惠</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-pricings">价格与优惠</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-testimonial">评价</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-testimonial">评价</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-blog">新闻</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-blog">新闻</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#contactus">预约和联系</a>
+						<a class="nav-link" href="<?=site_url()?>/#contactus">预约和联系</a>
 					</li>
 				</ul>
 			</div>
@@ -94,39 +94,39 @@
 			<nav class="side-nav">
 				<ul class="navbar-nav w-100">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#ourhome">首页</a>
+						<a class="nav-link" href="<?=site_url()?>/#ourhome">首页</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#aboutus">服务项目</a>
+						<a class="nav-link" href="<?=site_url()?>/#aboutus">服务项目</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#facilities">设施介绍</a>
+						<a class="nav-link" href="<?=site_url()?>/#facilities">设施介绍</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#portfolio-xe">活动影集</a>
+						<a class="nav-link" href="<?=site_url()?>/#portfolio-xe">活动影集</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-pricings">价格与优惠</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-pricings">价格与优惠</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-testimonial">评价</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-testimonial">评价</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#our-blog">新闻</a>
+						<a class="nav-link" href="<?=site_url()?>/#our-blog">新闻</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=get_stylesheet_directory_uri()?>/<?=site_url()?>/#contactus">预约和联系</a>
+						<a class="nav-link" href="<?=site_url()?>/#contactus">预约和联系</a>
 					</li>
 				</ul>
 			</nav>
 
 			<div class="side-footer w-100">
 				<ul class="social-icons-simple white top40">
-					<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i> </a> </li>
+					<li><a href="javascript:void(0)"><i class="fa fa-wechat"></i> </a></li>
+					<li><a href="javascript:void(0)"><i class="fa fa-weibo"></i> </a></li>
 				</ul>
-				<p class="whitecolor">&copy; 2018 XeOne. Made With Love by themesindustry</p>
+
+				<p class="copyrights wow fadeInUp" data-wow-delay="350ms"> &copy; 2019 诗序软件</p>
 			</div>
 		</div>
 	</div>
@@ -283,15 +283,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 text-center">
-				<ul class="social-icons bottom25">
-					<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
-					<li><a href="javascript:void(0)"><i class="fa fa-envelope-o"></i> </a> </li>
+				<ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms">
+					<li><a href="javascript:void(0)"><i class="fa fa-wechat"></i> </a></li>
+					<li><a href="javascript:void(0)"><i class="fa fa-weibo"></i> </a></li>
 				</ul>
-				<p class="copyrights"> &copy; 2019 XeOne. made with love by <a href="<?=get_stylesheet_directory_uri()?>/http://www.themesindustry.com/" target="_blank">themesindustry</a> </p>
+				<p class="copyrights wow fadeInUp" data-wow-delay="350ms"> &copy; 2019 诗序软件</p>
 			</div>
 		</div>
 	</div>
