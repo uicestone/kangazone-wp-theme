@@ -193,7 +193,7 @@
 				<div class="split-box text-center center-block container-padding equalheight" id="btn-feature">
 					<div class="heading-title padding">
 						<span class=" wow fadeIn" data-wow-delay="300ms"><?=get_the_subtitle($service_post)?></span>
-						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms"><?=get_the_title($service_post)?></h2>
+						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms"><a href="<?=get_the_permalink($service_post)?>"><?=get_the_title($service_post)?></a></h2>
 						<p class="heading_space wow fadeIn" data-wow-delay="400ms"><?=get_the_excerpt($service_post)?></p>
 						<a href="#portfolio-xe" class="button btnprimary pagescroll wow fadeInUp"
 						   data-wow-delay="500ms">立即预约</a>
