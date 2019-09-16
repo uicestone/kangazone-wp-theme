@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Kanga Zone</title>
-	<link href="images/favicon.png" rel="icon">
+	<link href="<?=get_stylesheet_directory_uri()?>/images/favicon.ico" rel="icon">
 	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/plugins.css">
 	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/style.css">
 
