@@ -1811,6 +1811,9 @@ i::before,i::after{
    }
 }
 
+.img-container img {
+    height: auto;
+}
 
 /*-------------------------------*/
     /*Horizontal Half Blocks ends*/

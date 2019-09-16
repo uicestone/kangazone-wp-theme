@@ -195,8 +195,8 @@
 						<span class=" wow fadeIn" data-wow-delay="300ms"><?=get_the_subtitle($service_post)?></span>
 						<h2 class="darkcolor bottom20 wow fadeIn" data-wow-delay="350ms"><a href="<?=get_the_permalink($service_post)?>"><?=get_the_title($service_post)?></a></h2>
 						<p class="heading_space wow fadeIn" data-wow-delay="400ms"><?=get_the_excerpt($service_post)?></p>
-						<a href="#portfolio-xe" class="button btnprimary pagescroll wow fadeInUp"
-						   data-wow-delay="500ms">立即预约</a>
+						<a href="<?=get_the_permalink($service_post)?>" class="button btnprimary wow fadeInUp"
+						   data-wow-delay="500ms">查看详情</a>
 					</div>
 				</div>
 			</div>
@@ -229,7 +229,7 @@
 		</div>
 		<div class="row">
 			<?php foreach (get_posts(array('category_name' => 'facility', 'order' => 'asc', 'posts_per_page' => -1)) as $facility): ?>
-			<div class="col-md-4 col-xs-12">
+			<div class="col-md-4 col-xs-6">
 				<div class="team-box top60 wow fadeIn" data-wow-delay="350ms">
 					<div class="image">
 						<?=get_the_post_thumbnail($facility->ID, 'medium')?>
@@ -464,37 +464,37 @@
 				<div class="price-table top60 wow fadeIn" data-wow-delay="300ms">
 					<h3 class="bottom20 darkcolor">小时计费</h3>
 					<ul class="top20">
-						<li><span></span></li>
+						<li><span>第2, 3小时半价</span></li>
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor"><i class="fa fa-cny"></i> 99 <small>/ 小时</small></h2>
+						<h2 class="defaultcolor"><i class="fa fa-cny"></i> 158 <small>/ 小时</small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-12">
 				<div class="price-table active top60 wow fadeIn" data-wow-delay="300ms">
-					<h3 class="bottom20 darkcolor">套餐计费</h3>
+					<h3 class="bottom20 darkcolor">购买会员卡</h3>
 					<ul class="top20">
-						<li><span></span></li>
+						<li><span>充值3000</span></li>
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor"><i class="fa fa-cny"></i> 199 <small>/ 3小时</small></h2>
+						<h2 class="defaultcolor">送<i class="fa fa-cny"></i> 3000 <small></small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-12">
 				<div class="price-table top60 wow fadeIn" data-wow-delay="300ms">
-					<h3 class="bottom20 darkcolor">包月计费</h3>
+					<h3 class="bottom20 darkcolor">购买会员卡</h3>
 					<ul class="top20">
-						<li><span></span></li>
+						<li><span>充值2000</span></li>
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor"><i class="fa fa-cny"></i> 1999 <small>/ 月</small></h2>
+						<h2 class="defaultcolor">送<i class="fa fa-cny"></i> 1200 <small></small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>

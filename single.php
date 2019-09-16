@@ -277,6 +277,72 @@
 </section>
 <!--Our Blogs Ends-->
 
+<!-- Contact US -->
+<section id="contactus" class="padding_top">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 col-sm-12 margin_bottom wow fadeInUp" data-wow-delay="350ms">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="heading-title heading_space wow fadeInUp" data-wow-delay="300ms">
+							<span>如有任何疑问，欢迎致电联系我们</span>
+							<h2 class="darkcolor">立即预约</h2>
+						</div>
+					</div>
+				</div>
+				<!--<p>West is not just about graphic design; it's more than that. We offer integral communication services,
+					and we're responsible for our process and results. We thank each client and their projects.</p>-->
+				<div class="row">
+					<div class="col-md-6 col-sm-6 our-address top40">
+						<h5 class="bottom25">地址</h5>
+						<p class="bottom15">南京市江宁区秣周东路12号
+							<span class="block">砂之船商场4楼-B02</span> </p>
+						<a class="pickus" href="#." data-text="在手机上导航">在手机上导航</a>
+					</div>
+					<div class="col-md-6 col-sm-6 our-address top40">
+						<h5 class="bottom25">联系电话</h5>
+						<p class="bottom15">咨询电话 : 025 00000000
+							<span class="block">预约电话 : 025 00000000</span></p>
+						<a class="pickus" href="#." data-text="致电我们">致电我们</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 margin_bottom">
+				<form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
+					<div class="row">
+						<div class="col-sm-10 offset-sm-1">
+							<div id="calendar" class="mb-3"></div>
+						</div>
+
+						<div class="col-sm-10 offset-sm-1">
+							<button type="button" class="button btnprimary" data-toggle="modal" data-target="#weapp-qrcode-modal">进入微信小程序预约</button>
+						</div>
+					</div>
+				</form>
+				<div id="weapp-qrcode-modal" class="modal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">微信扫码进入小程序预约</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<img src="<?=get_stylesheet_directory_uri()?>/images/weapp-qrcode.png" style="width: 100%" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Location Map here-->
+	<!--<div id="map-container"></div>-->
+</section>
+<!--Contact US Ends-->
 
 <!--Site Footer Here-->
 <footer id="site-footer" class="padding_half">
