@@ -2059,6 +2059,12 @@ i::before,i::after{
     height: 350px;
     object-fit: cover;
 }
+@media (max-width: 768px) {
+    .team-box img {
+        height: 180px;
+        object-fit: cover;
+    }
+}
 .team-box.grey-shade img{
    -webkit-filter: grayscale(100%);
    filter: grayscale(100%);
