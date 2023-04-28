@@ -468,7 +468,7 @@
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor"><i class="fa fa-cny"></i> 158 <small>/ 小时</small></h2>
+						<h2 class="defaultcolor"><i class="fa fa-cny"></i> - <small>/ 小时</small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>
@@ -477,11 +477,11 @@
 				<div class="price-table active top60 wow fadeIn" data-wow-delay="300ms">
 					<h3 class="bottom20 darkcolor">购买会员卡</h3>
 					<ul class="top20">
-						<li><span>充值3000</span></li>
+						<li><span> - </span></li>
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor">送<i class="fa fa-cny"></i> 3000 <small></small></h2>
+						<h2 class="defaultcolor"> <i class="fa fa-cny"></i>  <small></small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>
@@ -490,11 +490,11 @@
 				<div class="price-table top60 wow fadeIn" data-wow-delay="300ms">
 					<h3 class="bottom20 darkcolor">购买会员卡</h3>
 					<ul class="top20">
-						<li><span>充值2000</span></li>
+						<li><span> - </span></li>
 					</ul>
 					<div class="clearfix"></div>
 					<div class="ammount top50">
-						<h2 class="defaultcolor">送<i class="fa fa-cny"></i> 1200 <small></small></h2>
+						<h2 class="defaultcolor"> <i class="fa fa-cny"></i>  <small></small></h2>
 					</div>
 					<a href="javascript:void(0)" class="button btnprimary top50">立即购买 </a>
 				</div>
